@@ -205,5 +205,4 @@ dmypy.json
 credentials.json
 config.ini
 client_secrets.json
-backup_files/
 autobackup.sh
