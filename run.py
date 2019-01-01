@@ -13,7 +13,7 @@ def get_parent_id(drive, root_id):
     file_list = drive.ListFile({
         'q': "title = '%s' and mimeType = 'application/vnd.google-apps.folder' and '%s' in parents" % (now_date, root_id)
     }).GetList()
-    if file_list[0]:
+    if len(file_list) > 0:
         return file_list[0]['id']
 
     parent_folder = drive.CreateFile({
