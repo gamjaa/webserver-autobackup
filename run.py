@@ -43,4 +43,5 @@ parent_id = get_parent_id(drive, root_id)
 
 for (path, dir, files) in os.walk('./backup_files/'):
     for filename in files:
-        upload_file(drive, path, filename, parent_id)
+        if filename[0] != '.':
+            upload_file(drive, path, filename, parent_id)
